@@ -12,6 +12,24 @@
   margin-bottom: 6rem;
 }
 
+@media screen and (max-width: 1050px){
+  .main{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+
+@media screen and (max-width: 751px){
+  .main{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .main__title {
+    margin-bottom: 3rem;
+  }
+}
+
 @media screen and (max-width: 320px){
   .main{
     padding-top: 4rem;

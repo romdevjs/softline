@@ -15,20 +15,31 @@
   height: 2.5rem;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 751px){
   .header {
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 1.6rem;
-    padding-top: 1.6rem;
-    padding-bottom: 1.6rem;
+    gap: 2rem;
   }
 
   .nav{
     justify-content: start;
     align-items: start;
     flex-wrap: wrap;
+    gap: 1.6rem 2rem;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .header {
+    gap: 1.6rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .nav{
     gap: .5rem 1rem;
   }
 }

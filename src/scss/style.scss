@@ -97,13 +97,15 @@ ul {
   }
 }
 
+@media screen and (max-width: 751px) {
+  .title{
+    font-size: $mobileTitleFontSize;
+  }
+}
+
 @media screen and (max-width: 320px){
   .page{
     max-width: $mobileMaxWidth;
-  }
-
-  .title{
-    font-size: $mobileTitleFontSize;
   }
 
   .link{

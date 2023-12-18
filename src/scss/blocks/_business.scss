@@ -14,8 +14,8 @@
 }
 
 .business__list-item {
-  width: 61.5rem;
-  height: 26rem;
+  max-width: 61.5rem;
+  max-height: 26rem;
   position: relative;
 
   &:hover,
@@ -69,7 +69,45 @@
   display: none;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 1050px) {
+  .business {
+    padding: 8rem 0;
+  }
+
+  .business__title {
+    margin-bottom: 4rem;
+  }
+
+  .business__list {
+    gap: 2rem 2rem;
+  }
+
+  .business__list-content {
+    height: 6rem;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .business {
+    padding: 5rem 0;
+  }
+
+  .business__title {
+    margin-bottom: 3rem;
+  }
+
+  .business__list {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .business__list-item{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 471px) {
   .business {
     padding: 5rem 0;
   }

@@ -66,11 +66,11 @@
 
 .slider__image {
   width: 111rem;
-  height: 83.4rem;
+  max-height: 83.4rem;
 }
 
 .slider__tabs {
-  width: 100%;
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
@@ -91,10 +91,63 @@
   }
 }
 
-@media screen and (max-width: 320px) {
-  .life {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+@media screen and (max-width: 1051px) {
+  .slider {
+    width: 93rem;
+  }
+
+  .slider__image {
+    width: 93rem;
+    max-height: 69.9rem;
+  }
+}
+
+@media screen and (max-width: 971px) {
+  .slider {
+    width: 84rem;
+  }
+
+  .slider__image {
+    width: 84rem;
+    max-height: 63rem;
+  }
+}
+
+@media screen and (max-width: 891px) {
+  .slider {
+    width: 70rem;
+  }
+
+  .slider__image {
+    width: 70rem;
+    max-height: 52.5rem;
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .slider {
+    width: 50rem;
+  }
+
+  .slider__image {
+    width: 50rem;
+    max-height: 37.5rem;
+  }
+}
+
+@media screen and (max-width: 551px) {
+  .slider {
+    width: 35rem;
+    overflow-x: scroll;
+  }
+
+  .slider__image {
+    width: 35rem;
+    height: 26.2rem;
+  }
+
+  .life__btns-block {
+    display: none;
   }
 
   .life__header {
@@ -102,9 +155,17 @@
     margin-bottom: 1.5rem;
   }
 
-  .life__btns-block {
+  .slider__tabs {
     display: none;
   }
+}
+
+@media screen and (max-width: 320px) {
+  .life {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
 
   .slider {
     width: 100%;
@@ -115,9 +176,5 @@
   .slider__image{
     width: 28rem;
     height: 21rem;
-  }
-
-  .slider__tabs {
-    display: none;
   }
 }
