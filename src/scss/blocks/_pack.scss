@@ -1,0 +1,103 @@
+.pack {
+  @extend %container;
+}
+
+.pack__wrapper {
+  @extend %flex-col-c-c;
+  padding: 8rem 11rem;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.06);
+}
+
+.pack__title {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.pack__list {
+  @extend %flex-s-sb;
+  gap: 1.6rem;
+  margin-bottom: 14.5rem;
+}
+
+.pack__item {
+  @extend %flex-col-c-s;
+  gap: 1.6rem;
+  width: 17.8rem;
+  padding: 0 2rem;
+}
+
+.pack__item-image {
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+}
+
+.pack__item-title {
+  font-size: $fontSize;
+  font-weight: $normalFontWeight;
+  line-height: 110%;
+  text-align: center;
+}
+
+.pack__motivation {
+  @extend %flex-col-c-c;
+  gap: 5rem;
+}
+
+.pack__motivation-title {
+  font-size: 4rem;
+  line-height: 120%;
+  text-align: center;
+}
+
+.pack__motivation-title-red {
+  color: $secondRed;
+}
+
+.pack__motivation-list {
+  @extend %flex-c-c;
+  gap: 1.6rem;
+}
+
+@media screen and (max-width: 320px) {
+  .pack__wrapper {
+    padding: 2.4rem 0;
+  }
+
+  .pack__title {
+    text-align: left;
+    margin-bottom: 4rem;
+  }
+
+  .pack__list {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .pack__item {
+    gap: 1rem;
+    width: 12rem;
+    padding: 0;
+  }
+
+  .pack__item-image {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .pack__motivation {
+    gap: 2.5rem;
+  }
+
+  .pack__motivation-title {
+    font-size: 2.2rem;
+  }
+
+  .pack__motivation-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+}

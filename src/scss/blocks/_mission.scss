@@ -1,0 +1,62 @@
+.mission {
+  @extend %flex-col-c-c;
+  gap: 4rem;
+  background: $secondRed;
+  padding: 14rem 7.6rem;
+  position: relative;
+}
+
+.mission__image {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  z-index: 1;
+}
+
+.mission__image_left {
+  left: 0;
+}
+
+.mission__image_right {
+  right: 0;
+}
+
+.mission__title {
+  color: $light;
+  z-index: 2;
+}
+
+.mission__text {
+  font-size: $secondFontSize;
+  font-weight: $normalFontWeight;
+  line-height: 150%;
+  text-align: center;
+  color: $light;
+  z-index: 2;
+}
+
+@media screen and (max-width: 320px) {
+  .mission {
+    gap: 1rem;
+    padding: 3.2rem .5rem;
+  }
+
+  .mission__text {
+    font-size: $mobileFontSize;
+  }
+
+  .mission__image{
+    width: 14.2rem;
+    height: 15.2rem;
+  }
+
+  .mission__image_left {
+    left: -5rem;
+  }
+
+  .mission__image_right {
+    right: -5rem;
+  }
+}

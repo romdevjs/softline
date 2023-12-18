@@ -1,0 +1,117 @@
+@import 'normalize.css';
+@import 'variables.scss';
+@import 'extends.scss';
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/about";
+@import "blocks/offices";
+@import "blocks/mission";
+@import "blocks/business";
+@import "blocks/pack";
+@import "blocks/life";
+
+@font-face {
+  font-family: "Proxima Nova Condensed";
+  font-weight: 400;
+  src: url("../assets/font/proximanovacond_regular.ttf") format("truetype");
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  color: $dark;
+  font-family: $generalFonFamily;
+  font-style: normal;
+  font-weight: $generalFontWeight;
+}
+
+body {
+  font-size: $fontSize;
+  line-height: 1em;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 2.4rem;
+  font-weight: $generalFontWeight;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+a, button {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.title {
+  font-size: $titleFontSize;
+  line-height: 100%;
+}
+
+.link {
+  color: $dark;
+  transition: .3s color;
+
+  &:hover,
+  &:focus {
+    color: $primaryRed;
+  }
+
+  &:active {
+    color: #555;
+  }
+}
+
+.btn {
+  @extend %flex-inline-c-c;
+  font-size: $fontSize;
+  color: $light;
+  transition: .3s background-color;
+  border-radius: .8rem;
+  background-color: $primaryRed;
+  padding: 1.8rem 2.8rem;
+
+  &:hover,
+  &:focus {
+    background-color: $redHover;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .page{
+    max-width: $mobileMaxWidth;
+  }
+
+  .title{
+    font-size: $mobileTitleFontSize;
+  }
+
+  .link{
+    font-size: $mobileLinkFontSize;
+  }
+
+  .btn{
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+  }
+}

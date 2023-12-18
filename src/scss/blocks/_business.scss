@@ -1,0 +1,155 @@
+.business {
+  padding: 10rem 0;
+}
+
+.business__title {
+  margin-bottom: 5.5rem;
+  text-align: center;
+}
+
+.business__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem 2rem;
+}
+
+.business__list-item {
+  width: 61.5rem;
+  height: 26rem;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    .business__list-content {
+      width: 100%;
+      height: 100%;
+      padding: 2.8rem 11.5rem 9.2rem 2rem;
+    }
+
+    .business__list-title {
+      margin-bottom: 2rem;
+    }
+
+    .business__list-text {
+      font-size: 1.7rem;
+      line-height: 140%;
+      display: block;
+    }
+  }
+}
+
+.business__list-content {
+  width: 100%;
+  height: 8rem;
+  background: rgba(45, 54, 83, .6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: .2s height;
+  padding: 2.8rem 2rem;
+}
+
+.business__list-text {
+  color: $light;
+  font-weight: $normalFontWeight;
+  display: none;
+}
+
+.business__list-title {
+  color: $light;
+  margin: 0;
+}
+
+.business__list-image {
+  width: 100%;
+  height: 100%;
+}
+
+.mission__arrow {
+  display: none;
+}
+
+@media screen and (max-width: 320px) {
+  .business {
+    padding: 5rem 0;
+  }
+
+  .business__title {
+    margin-bottom: 1.5rem;
+  }
+
+  .business__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .business__list-item,
+  .business__list-item:hover,
+  .business__list-item:focus {
+    width: 100%;
+    height: 6rem;
+    overflow: hidden;
+    transition: .3s height;
+
+    .business__list-content {
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+    }
+
+    .business__list-title {
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2rem;
+      margin: auto 0;
+    }
+
+    .business__list-image {
+      height: 26rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+
+    .business__list-text {
+      display: none;
+    }
+
+    &.business__list-item_active {
+      height: 26rem;
+      overflow: auto;
+
+      .business__list-content {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 1rem 1rem 8rem;
+      }
+
+      .business__list-title {
+        margin-bottom: 1rem;
+      }
+
+      .business__list-text {
+        display: block;
+        font-size: $mobileFontSize;
+      }
+
+      .mission__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .mission__arrow {
+    display: inline-block;
+    transition: .3s all;
+  }
+}

@@ -1,0 +1,243 @@
+.offices {
+  padding-bottom: 10rem;
+
+  &.offices_open {
+    .offices__arrow {
+      transform: rotate(180deg);
+    }
+
+    .offices__menu {
+      @extend %flex-s-sb;
+      z-index: 5;
+    }
+
+    .offices__image {
+      opacity: .3;
+
+      &.offices__image_hidden {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.offices__header {
+  @extend %container;
+  @extend %flex-c-sb;
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.06);
+  position: relative;
+  margin-bottom: 9rem;
+}
+
+.offices__select-btn {
+  @extend %flex-inline-c-c;
+  gap: 1.6rem;
+  font-size: 2.4rem;
+}
+
+.offices__arrow {
+  transform: rotate(0);
+  transition: .3s all;
+}
+
+.offices__list {
+  @extend %flex-c-sb;
+  gap: 3rem;
+}
+
+.offices__btn {
+  font-size: $fontSize;
+  font-weight: $generalFontWeight;
+  transition: .3s all;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: $secondRed;
+  }
+
+  &:disabled {
+    opacity: .3;
+    cursor: not-allowed;
+  }
+
+  &.offices__btn_active {
+    color: $secondRed;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 3px;
+      background: $secondRed;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2.8rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.offices__menu {
+  @extend %container;
+  display: none;
+  width: 100%;
+  height: 27.2rem;
+  gap: 2.4rem;
+  position: absolute;
+  left: 0;
+  bottom: -29.2rem;
+  background: $light;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.06);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  z-index: 3;
+}
+
+.offices__menu-list {
+  @extend %flex-col-s-s;
+  gap: 1rem;
+}
+
+.offices__menu-list-item:not(:first-child) {
+  font-weight: $normalFontWeight;
+}
+
+.offices__image-block {
+  width: 100%;
+  height: 60.4rem;
+  position: relative;
+}
+
+.offices__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .3s all;
+
+  &.offices__image_hidden {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .offices {
+    padding-bottom: 7rem;
+
+    &.offices_open {
+      .offices__list {
+        display: none;
+      }
+
+      .offices__menu {
+        width: 100%;
+        height: auto;
+        justify-content: start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 22% 22% 30%;
+        gap: 3rem;
+        position: static;
+      }
+    }
+  }
+
+  .offices__header {
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: .8rem;
+  }
+
+  .offices__select-btn {
+    gap: .6rem;
+    font-size: 2rem;
+  }
+
+  .offices__list {
+    width: 100%;
+    height: 5rem;
+    justify-content: start;
+    gap: 1.6rem;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .offices__btn {
+    white-space: nowrap;
+    font-size: $mobileLinkFontSize;
+    overflow-wrap: unset;
+
+    &.offices__btn_active:before {
+      bottom: -1.6rem;
+    }
+  }
+
+  .offices__menu {
+    display: none;
+    font-size: $mobileLinkFontSize;
+  }
+
+  .offices__menu-list:not(:last-child){
+    white-space: nowrap;
+
+    .offices__menu-list-item:first-child{
+      position: relative;
+
+      &:after{
+        display: block;
+        content: '';
+        position: absolute;
+        top: 40%;
+        right: -12px;
+        margin: auto 0;
+        border-top: 4px solid #000;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        transition: .3s;
+      }
+    }
+  }
+
+  .offices__menu-list-item:not(:first-child){
+    display: none;
+  }
+
+  .offices__menu-list{
+    &.office__menu-list_active{
+      .offices__menu-list-item:first-child{
+        color: $secondRed;
+
+        &:after{
+          transform: rotate(180deg);
+        }
+      }
+
+      .offices__menu-list-item{
+        display: block;
+      }
+    }
+  }
+
+  .offices__image-block {
+    height: 40rem;
+  }
+
+  .offices__image{
+    object-fit: contain;
+  }
+}

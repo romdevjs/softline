@@ -1,0 +1,87 @@
+.about {
+  @extend %container;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.about__company {
+  @extend %flex-col-c-c;
+  padding: 10rem 11rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.08);
+
+  font-size: $secondFontSize;
+  line-height: 120%;
+  font-weight: 400;
+}
+
+.about__company-paragraph {
+  text-wrap: none;
+}
+
+.about__company-red {
+  color: $primaryRed;
+  font-weight: $generalFontWeight;
+}
+
+.about__numbers {
+  @extend %flex-c-c;
+  padding: 10rem;
+}
+
+.about__numbers-list {
+  @extend %flex-c-c;
+  flex-wrap: wrap;
+  gap: 8rem 18rem;
+}
+
+.about__numbers-list-item{
+  @extend %flex-col-c-s;
+}
+
+.about__number-title {
+  font-size: 8rem;
+  color: $secondRed;
+}
+
+.about__number-text {
+  font-weight: $normalFontWeight;
+}
+
+@media screen and (max-width: 320px){
+  .about{
+    padding: 6rem 0 5.2rem;
+  }
+
+  .about__company{
+    display: block;
+    padding: 2.4rem .5rem;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.08);
+    font-size: $mobileFontSize;
+  }
+
+  .about__company-paragraph{
+    display: inline;
+  }
+
+  .about__numbers{
+    padding: 5.1rem 1rem;
+  }
+
+  .about__numbers-list{
+    gap: 2.4rem .8rem;
+  }
+
+  .about_numbers-list-item{
+    width: 50%;
+  }
+
+  .about__number-title {
+    font-size: 4rem;
+  }
+
+  .about__number-text{
+    font-size: $mobileFontSize;
+  }
+}
