@@ -15,5 +15,5 @@
     <li>Nunjucks</li>
 </ul>
 
-[Link to layout](https://www.figma.com/file/d5vlqZXjL5vMDhIhMgJMPk/Peach-test-frontend?node-id=0%3A1&t=Fdr6ZauMa581glOw-0)
-[Deployed project](https://romdevjs.github.io/softline/)
+<p><a href="https://www.figma.com/file/d5vlqZXjL5vMDhIhMgJMPk/Peach-test-frontend?node-id=0%3A1&t=Fdr6ZauMa581glOw-0">Link to layout</a></p>
+<p><a color="orange" href="https://romdevjs.github.io/softline/">Deployed project</a></p>
