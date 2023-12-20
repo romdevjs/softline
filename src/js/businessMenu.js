@@ -1,4 +1,4 @@
-const bussinesMenu = () => {
+const businessMenu = () => {
   const items = document.querySelectorAll('.business__list-item');
 
   const itemClickHandler = (index) => {
@@ -16,4 +16,4 @@ const bussinesMenu = () => {
   });
 }
 
-bussinesMenu();
+businessMenu();

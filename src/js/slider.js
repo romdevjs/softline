@@ -1,5 +1,3 @@
-import '../scss/style.scss';
-
 const slide = () => {
   const slider = document.getElementById('slider');
   const prevBtn = document.getElementById('slider__btn-prev');
